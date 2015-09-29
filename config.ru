@@ -32,7 +32,6 @@ get '/' do
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width" name="viewport">
   <title>Chatwork Checker</title>
-  <style>{ line-height: 150% }</style>
 </head>
 <body>
 Result at: #{ENV['TZ'] = 'Asia/Tokyo'; Time.now}<br>
