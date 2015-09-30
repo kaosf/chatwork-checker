@@ -1,4 +1,9 @@
 {
   "name": "Chatwork Checker",
-  "repository": "https://github.com/kaosf/chatwork-checker"
+  "repository": "https://github.com/kaosf/chatwork-checker",
+  "env": {
+    "BASIC_AUTH_USERNAME": "",
+    "BASIC_AUTH_PASSWORD": "",
+    "CHATWORK_API_TOKEN": ""
+  }
 }
