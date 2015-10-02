@@ -47,8 +47,9 @@ API rate limit remaining: #{rate_limit_remaining}<br>
     background: #ddd;
     font-size: 150%;"
   onclick="
+    document.getElementById('reloadbutton').innerHTML='Please wait ...';
     location.reload();
-    document.getElementById('reloadbutton').innerHTML='Please wait ...';"
+  "
 >TAP HERE TO RELOAD</div>
 </body>
 </html>
