@@ -9,7 +9,7 @@ end
 
 require 'net/https'
 require 'json'
-uri = URI.parse 'https://api.chatwork.com/v1/my/status'
+uri = URI.parse 'https://api.chatwork.com/v2/my/status'
 https = Net::HTTP.new(uri.host, uri.port)
 https.use_ssl = true
 req = Net::HTTP::Get.new(uri.path)
