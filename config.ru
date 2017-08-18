@@ -3,10 +3,6 @@ Dotenv.load
 
 require 'sinatra'
 
-use Rack::Auth::Basic do |username, password|
-  username == ENV['BASIC_AUTH_USERNAME'] && password == ENV['BASIC_AUTH_PASSWORD']
-end
-
 require 'net/https'
 require 'json'
 uri = URI.parse 'https://api.chatwork.com/v2/my/status'
@@ -18,7 +14,7 @@ req['X-ChatworkToken'] = ENV['CHATWORK_API_TOKEN']
 
 run Sinatra::Application
 
-get '/' do
+get "/#{ENV['SECRET_PATH']}" do
   res = https.request(req)
   rate_limit_remaining = res.header['X-RateLimit-Remaining']
   body = JSON.parse(res.body)
