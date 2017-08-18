@@ -4,16 +4,14 @@
 
 ```sh
 heroku config:set \
-  BASIC_AUTH_USERNAME=username-for-basic-auth \
-  BASIC_AUTH_PASSWORD=password-for-basic-auth \
-  CHATWORK_API_TOKEN=0123456789abdefg0123456789abcdef
+  CHATWORK_API_TOKEN=0123456789abdefg0123456789abcdef \
+  SECRET_PATH=yourrandomstringABCxyz0123456789
 ```
 
-## When you forget BASIC auth information
+## When you forget the `SECRET_PATH`
 
 ```sh
-heroku config:get BASIC_AUTH_USERNAME
-heroku config:get BASIC_AUTH_PASSWORD
+heroku config
 ```
 
 ## License
